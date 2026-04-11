@@ -39,7 +39,7 @@ you can also clone this repository:
 ---
 ## Detection Pipeline
 
-
+![Model Architecture](Model Architecture.jpg)
 
 1. Input annotated images
 2. Feature extraction using CNN backbone (ResNet)
