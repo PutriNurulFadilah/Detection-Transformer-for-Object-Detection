@@ -21,6 +21,32 @@ https://huggingface.co/docs/transformers/model_doc/detr
 
 ```python
 from transformers import DetrForObjectDetection
-model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50")```
+model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50")
+```
 
-you can also clone this repository: - if you have annotated data, you can directly use without roboflow API key - if you have raw data, you should annotate it first using roboflow (https://app.roboflow.com/) or another platform - if use this code, you should adjust the image size to 224x224
+you can also clone this repository: 
+- if you have annotated data, you can directly use without roboflow API key
+- if you have raw data, you should annotate it first using roboflow (https://app.roboflow.com/) or another platform
+- - if use this code, you should adjust the image size to 224x224
+
+# ---
+
+# HOW TO USE THIS REPOSITORY: 
+1. Run config.py (provide your API key from Roboflow)
+2. Adjust your model configuration
+3. Run train.py, then modify your workspace name and project name
+4. Run testing.py
+5. Results will be saved in the evaluation_result folder
+
+---
+## Detection Pipeline
+1. Input annotated images
+2. Feature extraction using CNN backbone (ResNet)
+3. Feature flattening + positional encoding
+4. Transformer encoder-decoder processing
+5. Object queries predict bounding boxes
+6. Feed Forward Network (FFN) produces:
+  - Bounding box coordinates
+  - Class labels (parasite / non-parasite)
+  - Confidence scores
+In addition to standard DETR, this study explores dilated convolution applied to ResNet backbones:
