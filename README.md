@@ -48,6 +48,7 @@ you can also clone this repository:
   - Bounding box coordinates
   - Class labels (parasite / non-parasite)
   - Confidence scores
+    
 In addition to standard DETR, this study explores dilated convolution applied to ResNet backbones:
 ![Dilated Conv](Dilated_Conv.png)
 
@@ -72,3 +73,5 @@ In addition to standard DETR, this study explores dilated convolution applied to
 | DETR-R101  | 2,2      | 0.636 | 0.547 | 0.547 | 0.238 | 0.402 | 0.596 | 0.552 |
 | DETR-R50   | 2        | **0.677** | **0.597** | **0.586** | **0.437** | **0.454** | 0.610 | **0.605** |
 | DETR-R101  | 2        | 0.666 | 0.590 | 0.580 | 0.430 | 0.438 | **0.626** | 0.594 |
+
+ResNet-50 consistently outperformed ResNet-101 across all configurations, both under default settings and with dilated convolution. The best performance was achieved using dilation at stage 4 (rate = 2), resulting in an mAP of 0.586 and AR of 0.605.
