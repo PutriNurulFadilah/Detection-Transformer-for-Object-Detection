@@ -45,9 +45,9 @@ you can also clone this repository:
 4. Transformer encoder-decoder processing
 5. Object queries predict bounding boxes
 6. Feed Forward Network (FFN) produces:
-  - Bounding box coordinates
-  - Class labels (parasite / non-parasite)
-  - Confidence scores
+- - Bounding box coordinates
+- - Class labels (parasite / non-parasite)
+- - Confidence scores
     
 In addition to standard DETR, this study explores dilated convolution applied to ResNet backbones:
 ![Dilated Conv](Dilated_Conv.png)
