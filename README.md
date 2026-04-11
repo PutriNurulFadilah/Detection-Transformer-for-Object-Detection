@@ -15,7 +15,7 @@ A deep learning-based system for detecting parasitic worms on bivalve shells usi
 
 ---
 
-## 🧠 Model
+## Model
 Download DETR model from HuggingFace (or other resources):  
 https://huggingface.co/docs/transformers/model_doc/detr
 
@@ -38,6 +38,9 @@ you can also clone this repository:
 
 ---
 ## Detection Pipeline
+
+
+
 1. Input annotated images
 2. Feature extraction using CNN backbone (ResNet)
 3. Feature flattening + positional encoding
