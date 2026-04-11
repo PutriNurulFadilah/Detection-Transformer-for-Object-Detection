@@ -49,3 +49,13 @@ you can also clone this repository:
   - Class labels (parasite / non-parasite)
   - Confidence scores
 In addition to standard DETR, this study explores dilated convolution applied to ResNet backbones:
+![Dilated Conv](Dilated_Conv.png)
+
+| Model            | Backbone   | Dilated Stage   | Dilation Values | Epoch |
+|------------------|------------|-----------------|-----------------|-------|
+| DETR             | ResNet-50  | Stage 1,2,3,4   | 2,2,4,8         | 100   |
+| DETR             | ResNet-101 | Stage 1,2,3,4   | 2,2,4,8         | 100   |
+| DETR             | ResNet-50  | Stage 3,4       | 2,2             | 100   |
+| DETR             | ResNet-101 | Stage 3,4       | 2,2             | 100   |
+| DETR             | ResNet-50  | Stage 4         | 2               | 100   |
+| DETR             | ResNet-101 | Stage 4         | 2               | 100   |
